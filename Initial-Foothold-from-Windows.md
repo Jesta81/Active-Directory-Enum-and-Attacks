@@ -127,12 +127,12 @@ LLMNR & NBT-NS poisoning is possible from a Windows host as well. In the last se
 	OutBuffer               System.Management.Automation.ParameterMetadata
 	PipelineVariable        System.Management.Automation.ParameterMetadata
 	
-![PowerShell Inveigh Usage](/Active-Directory-Enum-and-Attacks/images-windows/invoke-inveigh.png)
+![PowerShell Inveigh Usage](Active-Directory-Enum-and-Attacks/images-windows/invoke-inveigh.png)
 
 
 > - Let's start Inveigh with LLMNR and NBNS spoofing, and output to the console and write to a file. We will leave the rest of the defaults, which can be seen [here](https://github.com/Kevin-Robertson/Inveigh#parameter-help).
 
-![Inveigh Output](/Active-Directory-Enum-and-Attacks/images-windows/inveigh-pwsh-output.png) 
+![Inveigh Output](Active-Directory-Enum-and-Attacks/images-windows/inveigh-pwsh-output.png) 
 
 > - We can see that we immediately begin getting LLMNR and mDNS requests. The below animation shows the tool in action. 
 
@@ -143,7 +143,7 @@ LLMNR & NBT-NS poisoning is possible from a Windows host as well. In the last se
 
 > - Let's go ahead and run the C# version with the defaults and start capturing hashes.
 
-![Inveigh PE](/Active-Directory-Enum-and-Attacks/images-windows/inveigh-PE.png) 
+![Inveigh PE](Active-Directory-Enum-and-Attacks/images-windows/inveigh-PE.png) 
 
 > - As we can see, the tool starts and shows which options are enabled by default and which are not. The options with a **[+]** are default and enabled by default and the ones with a **[ ]** before them are disabled. The running console output also shows us which options are disabled and, therefore, responses are not being sent (mDNS in the above example). We can also see the message **Press ESC to enter/exit interactive console**, which is very useful while running the tool. The console gives us access to captured credentials/hashes, allows us to stop Inveigh, and more.
 
@@ -151,11 +151,11 @@ LLMNR & NBT-NS poisoning is possible from a Windows host as well. In the last se
 
 > - After typing **HELP** and hitting enter, we are presented with several options:
 
-![Inveigh PE HELP](/Active-Directory-Enum-and-Attacks/images-windows/inveight-PE-Help.png) 
+![Inveigh PE HELP](Active-Directory-Enum-and-Attacks/images-windows/inveight-PE-Help.png) 
 
 > - We can quickly view unique captured hashes by typing **GET NTLMV2UNIQUE**.
 
-![Inveigh Hashes](/Active-Directory-Enum-and-Attacks/images-windows/inveigh-hashes.png) 
+![Inveigh Hashes](Active-Directory-Enum-and-Attacks/images-windows/inveigh-hashes.png) 
 
 > - We can type in **GET NTLMV2USERNAMES** and see which usernames we have collected. This is helpful if we want a listing of users to perform additional enumeration against and see which are worth attempting to crack offline using Hashcat.
 
@@ -195,12 +195,12 @@ LLMNR & NBT-NS poisoning is possible from a Windows host as well. In the last se
 3. > - We can disable LLMNR in Group Policy by going to Computer Configuration --> Administrative Templates --> Network --> DNS Client and enabling "Turn OFF Multicast Name Resolution."
 
 
-![Disalbe LLMNR](/Active-Directory-Enum-and-Attacks/images-windows/disable-dns-client.png) 
+![Disalbe LLMNR](Active-Directory-Enum-and-Attacks/images-windows/disable-dns-client.png) 
 
 
 4. > - NBT-NS cannot be disabled via Group Policy but must be disabled locally on each host. We can do this by opening **Network and Sharing Center under Control Panel**, clicking on **Change adapter settings**, right-clicking on the adapter to view its properties, selecting **Internet Protocol Version 4 (TCP/IPv4)**, and clicking the **Properties** button, then clicking on **Advanced** and selecting the **WINS** tab and finally selecting **Disable NetBIOS over TCP/IP**.
 
-![Disable Netbios](/Active-Directory-Enum-and-Attacks/images-windows/disable-netbios.png) 
+![Disable Netbios](Active-Directory-Enum-and-Attacks/images-windows/disable-netbios.png) 
 
 4. > - While it is not possible to disable NBT-NS directly via GPO, we can create a PowerShell script under Computer Configuration --> Windows Settings --> Script (Startup/Shutdown) --> Startup with something like the following:
 
