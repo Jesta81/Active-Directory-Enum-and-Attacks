@@ -41,7 +41,7 @@
 	    do echo $x;
 	done
 
-![Password Spray](/Password-Spraying/images/wordlist.png) 
+![Password Spray](/Password-Spraying/images/wordlst.png) 
 
 
 - I then used the generated username list with **Kerbrute** to enumerate every single user account in the domain. This attempt to make it more difficult to enumerate usernames ended up with me being able to enumerate every single account in the domain because of the predictable GUID in use combined with the PDF metadata I could locate and greatly facilitated the attack. 
