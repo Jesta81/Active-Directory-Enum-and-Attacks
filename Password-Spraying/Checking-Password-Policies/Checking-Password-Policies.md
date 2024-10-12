@@ -73,7 +73,7 @@
 - It can be found pre-installed on many different penetration testing distros, including Parrot Security Linux. Below we have an example output displaying information that can be provided by **enum4linux**. Here are some common enumeration tools and the ports they use: 
 
 
-![Password Policy](/Password-Spraying/Checking-Password-Policies/images/smbtool_ports.png) 
+![Password Policy](/Password-Spraying/Checking-Password-Policies/images/smbtool-ports.png) 
 
 
 
