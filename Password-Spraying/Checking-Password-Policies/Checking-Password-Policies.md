@@ -17,7 +17,7 @@
 - And we get the following password policy information on the domain after running the crackmapexec command.
 
 
-![Password Policy](/Checking-Password-Policies/images/policy.png) 
+![Password Policy](/Password-Spraying/Checking-Password-Policies/images/policy.png) 
 
 
 
@@ -60,10 +60,10 @@
 
 
 
-![Password Policy](/Checking-Password-Policies/images/rpc-1.png) 
+![Password Policy](/Password-Spraying/Checking-Password-Policies/images/rpc-1.png) 
 
 
-![Password Policy](/Checking-Password-Policies/images/rpc-2.png) 
+![Password Policy](/Password-Spraying/Checking-Password-Policies/images/rpc-2.png) 
 
 
 
@@ -73,7 +73,7 @@
 - It can be found pre-installed on many different penetration testing distros, including Parrot Security Linux. Below we have an example output displaying information that can be provided by **enum4linux**. Here are some common enumeration tools and the ports they use: 
 
 
-![Password Policy](/Checking-Password-Policies/images/smbtool_ports.png) 
+![Password Policy](/Password-Spraying/Checking-Password-Policies/images/smbtool_ports.png) 
 
 
 
@@ -85,10 +85,10 @@
 
 
 
-![Password Policy](/Checking-Password-Policies/images/enum4linux.png) 
+![Password Policy](/Password-Spraying/Checking-Password-Policies/images/enum4linux.png) 
 
 
-![Password Policy](/Checking-Password-Policies/images/enum4linux-2.png) 
+![Password Policy](/Password-Spraying/Checking-Password-Policies/images/enum4linux-2.png) 
 
 
 - The tool [enum4linux-ng](https://github.com/cddmp/enum4linux-ng) is a rewrite of **enum4linux** in Python, but has additional features such as the ability to export data as YAML or JSON files which can later be used to process the data further or feed it to other tools. It also supports colored output, among other features. 
@@ -99,11 +99,11 @@
 
 
 
-![Password Policy](/Checking-Password-Policies/images/enum4ng.png) 
+![Password Policy](/Password-Spraying/Checking-Password-Policies/images/enum4ng.png) 
 
 
 
-![Password Policy](/Checking-Password-Policies/images/enum4ng-2.png) 
+![Password Policy](/Password-Spraying/Checking-Password-Policies/images/enum4ng-2.png) 
 
 
 
@@ -113,7 +113,7 @@
 #### Displaying the contents of ilfreight.json
 
 
-![Password Policy](/Checking-Password-Policies/images/json.png) 
+![Password Policy](/Password-Spraying/Checking-Password-Policies/images/json.png) 
 
 
 
@@ -130,7 +130,7 @@
 	> net use \\DC01\ipc$ "" /u:""
 
 
-![Password Policy](/Checking-Password-Policies/images/win.png) 
+![Password Policy](/Password-Spraying/Checking-Password-Policies/images/win.png) 
 
 
 
@@ -146,7 +146,7 @@
 
 
 
-![Password Policy](/Checking-Password-Policies/images/win-2.png) 
+![Password Policy](/Password-Spraying/Checking-Password-Policies/images/win-2.png) 
 
 
 
@@ -158,7 +158,7 @@
 
 
 
-![Password Policy](/Checking-Password-Policies/images/win-3.png) 
+![Password Policy](/Password-Spraying/Checking-Password-Policies/images/win-3.png) 
 
 
 
@@ -166,7 +166,7 @@
 
 
 
-![Password Policy](/Checking-Password-Policies/images/win-4.png) 
+![Password Policy](/Password-Spraying/Checking-Password-Policies/images/win-4.png) 
 
 
 
@@ -190,7 +190,7 @@
 	$ ldapsearch -h 172.16.5.5 -x -b "DC=INLANEFREIGHT,DC=LOCAL" -s sub "*" | grep -m 1 -B 10 pwdHistoryLength 
 
 
-![Password Policy](/Checking-Password-Policies/images/ldap.png) 
+![Password Policy](/Password-Spraying/Checking-Password-Policies/images/ldap.png) 
 
 
 Here we can see the minimum password length of 8, lockout threshold of 5, and password complexity is set **(pwdProperties set to 1)**.
