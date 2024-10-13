@@ -172,4 +172,4 @@ Tools such as **windapsearch** make this easier (though we should still understa
 
 
 
-![cme valid password](/Password-Spraying/Making-Target-Userlist/images/cme-valid-password.png) 
+![cme valid password](/Password-Spraying/Making-Target-Userlist/images/cmd-valid-password.png) 
